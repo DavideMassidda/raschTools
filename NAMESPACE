@@ -1,0 +1,5 @@
+import(cowplot)
+import(ggplot2)
+import(psych)
+import(eRm)
+exportPattern("^[[:alpha:]]+")

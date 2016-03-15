@@ -1,0 +1,11 @@
+Package: raschTools
+Type: Package
+Title: Rasch analysis tools
+Version: 0.0-0
+Date: 2016-03-15
+Author: Davide Massidda <davide.massidda@gmail.com>
+Maintainer: Davide Massidda <davide.massidda@gmail.com>
+Description: Tools to integrate Rasch model analysis by plotting results and calculating fit indices.
+Depends: R (>= 3.2.0), cowplot, eRm, ggplot2, psych
+License: GPL (>= 2)
+URL: https://github.com/DavideMassidda/raschTools
