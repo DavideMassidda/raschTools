@@ -31,5 +31,9 @@ Davide Massidda \email{davide.massidda@gmail.com}
 \code{\link[raschTools]{reliability}}
 }
 \examples{
-# to do
+data(test1)
+fit <- RM(test1)
+ppar <- person.parameter(fit)
+res <- residuals(ppar)
+(pa <- parallel(res))
 }
