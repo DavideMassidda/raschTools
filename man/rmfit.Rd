@@ -1,6 +1,6 @@
 \name{rmfit}
 \alias{rmfit}
-\alias{print.rmfit}
+\alias{rmfit-class}
 \title{Fit indices for Rasch models}
 \description{
 to do
