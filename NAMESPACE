@@ -1,4 +1,6 @@
 import(cowplot)
 import(ggplot2)
 import(eRm)
+importFrom("methods", "new")
+importFrom("stats", "rbinom", "rnorm", "runif")
 exportPattern("^[[:alpha:]]+")
