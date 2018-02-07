@@ -6,6 +6,6 @@ Date: 2018-02-07
 Author: Davide Massidda <davide.massidda@gmail.com>
 Maintainer: Davide Massidda <davide.massidda@gmail.com>
 Description: Tools to integrate Rasch model analysis by plotting results and calculating fit indices.
-Depends: R (>= 3.2.0), cowplot, eRm, ggplot2
+Depends: R (>= 3.2.0), cowplot, eRm, ggplot2, testing
 License: GPL (>= 2)
 URL: https://github.com/DavideMassidda/raschTools
