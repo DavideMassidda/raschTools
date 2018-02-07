@@ -1,4 +1,6 @@
-pimap <- function(data.pr, data.it, logit.pr, logit.it, item, thr, rel_widths=c(1,2), logit.range=NULL, binwidth=0.25, xlab.pr="", xlab.it="Item", ylab.pr="Count", ylab.it="logit", title.pr="Person\'s abilities", title.it="Item thresholds")
+pimap <- function(data.pr, data.it, logit.pr, logit.it, item, thr, rel_widths=c(1,2),
+                  logit.range=NULL, binwidth=0.25, xlab.pr="", xlab.it="Item", ylab.pr="Count",
+                  ylab.it="logit", title.pr="Person\'s abilities", title.it="Item thresholds")
 {
     # Checks on data
     if(!is.factor(data.it[,item]))
@@ -8,8 +10,8 @@ pimap <- function(data.pr, data.it, logit.pr, logit.it, item, thr, rel_widths=c(
     # Range of logits (limits of axes)
     if(is.null(logit.range)) {
         logit.range <- range(c(data.pr[,logit.pr], data.it[,logit.it]))
-        logit.range[1] <- .decimal_floor(logit.range[1])
-        logit.range[2] <- .decimal_ceiling(logit.range[2])
+        logit.range[1] <- testing::decimal.floor(logit.range[1])
+        logit.range[2] <- testing::decimal.ceiling(logit.range[2])
     }
     # Person's abilities panel
     pr <- ggplot(data.pr, aes_string(x=logit.pr)) +
