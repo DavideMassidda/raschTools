@@ -2,7 +2,7 @@
 \alias{pimap}
 \title{Person-Item Map}
 \description{
-to do
+Person-item map for the Partial Credit Model estimated with the function \code{PCM} of the \code{eRm} package.
 }
 \usage{
 pimap(data.pr, data.it, logit.pr, logit.it, item, thr, rel_widths = c(1,2),
@@ -34,7 +34,7 @@ to do
 Davide Massidda \email{davide.massidda@gmail.com}
 }
 \seealso{
-\code{\link[raschTools]{reliability}}
+\code{\link[eRm]{PCM}}
 }
 \examples{\dontrun{
 data(test2)
