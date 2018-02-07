@@ -43,6 +43,8 @@ persPar <- person.parameter(fit)
 persPar <- data.frame(logit=persPar$thetapar[[1]])
 itemPar <- thresholds(fit)
 itemPar <- data.frame(itemPar$threshtable[[1]][,-1])
-itemPar <- reshape(itemPar, varying=1:3, v.names="logit", timevar="step", idvar="item", direction="long")
-pimap(persPar, itemPar, logit.pr="logit", logit.it="logit", item="item", thr="step")
+itemPar <- reshape(itemPar, varying=1:3, v.names="logit",
+                   timevar="step", idvar="item", direction="long")
+pimap(persPar, itemPar, logit.pr="logit",
+      logit.it="logit", item="item", thr="step")
 }}
