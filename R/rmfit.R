@@ -1,4 +1,16 @@
-rmfit <- function(model,person.par=NULL)
+setClass("rmfit",
+    slots = c(
+        fit.indices = "vector"
+    )
+)
+
+setMethod("show","rmfit",
+    function(object) {
+        print(round(object@fit.indices,2))
+    }
+)
+
+rmfit <- function(model, person.par=NULL)
 {
     # 'model': Un modello di classe dRm/Rm/eRm
     fit <- list(item=NULL,person=NULL)
@@ -22,12 +34,5 @@ rmfit <- function(model,person.par=NULL)
     G <- sqrt(SA2/MSE2)
     H <- (4*G+1)/3
     R <- SA2/SD2
-    fit$person <- c(SA2=SA2,SD2=SD2,RMSE=sqrt(MSE2),G=G,H=H,R=R)
-    class(fit) <- "rmfit"
-    return(fit)
-}
-
-print.rmfit <- function(x,...)
-{
-    print(round(x,2))
+    new("rmfit", fit.indices=c(SA2=SA2,SD2=SD2,RMSE=sqrt(MSE2),G=G,H=H,R=R))
 }
