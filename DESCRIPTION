@@ -1,8 +1,8 @@
 Package: raschTools
 Type: Package
 Title: Rasch analysis tools
-Version: 0.0-2
-Date: 2018-02-07
+Version: 0.0-3
+Date: 2018-03-07
 Author: Davide Massidda <davide.massidda@gmail.com>
 Maintainer: Davide Massidda <davide.massidda@gmail.com>
 Description: Tools to integrate Rasch model analysis by plotting results and calculating fit indices.
