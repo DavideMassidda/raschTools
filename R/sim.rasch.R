@@ -38,17 +38,27 @@ setMethod("show","RaschData",
     # p: vettore di probabilità associate alle k soglie di un item.
     # m: numero di soglie da superare, ovvero punteggio massimo,
     #    ovvero lunghezza di p.
-    k <- 0
-    resp <- 0
-    repeat {
-        k <- k+1
-        x <- rbinom(1,1,p[k])
-        if(x==1)
-            resp <- resp+1
-        if(x==0 | k==m)
-            break
+    #k <- 0
+    #resp <- 0
+    #repeat {
+    #    k <- k+1
+    #    x <- rbinom(1,1,p[k])
+    #    if(x==1)
+    #        resp <- resp+1
+    #    if(x==0 | k==m)
+    #        break
+    #}
+    #return(resp)
+    m <- m+1
+    p <- c(1-sum(p),p)
+    i <- 1
+    x <- 0
+    while(x==(i-1) & i<m) {
+        i = i+1
+        p_i <- p[i]/(p[i-1]+p[i])
+        x <- x+rbinom(1,1,p_i)
     }
-    return(resp)
+    return(x)
 }
 
 # ------------------------------------------------------------
