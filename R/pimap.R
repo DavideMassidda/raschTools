@@ -10,8 +10,8 @@ pimap <- function(data.pr, data.it, logit.pr, logit.it, item, thr, rel_widths=c(
     # Range of logits (limits of axes)
     if(is.null(logit.range)) {
         logit.range <- range(c(data.pr[,logit.pr], data.it[,logit.it]))
-        logit.range[1] <- testing::decimal.floor(logit.range[1])
-        logit.range[2] <- testing::decimal.ceiling(logit.range[2])
+        logit.range[1] <- testing::decimal_floor(logit.range[1])
+        logit.range[2] <- testing::decimal_ceiling(logit.range[2])
     }
     # Person's abilities panel
     pr <- ggplot(data.pr, aes_string(x=logit.pr)) +
@@ -38,9 +38,3 @@ pimap <- function(data.pr, data.it, logit.pr, logit.it, item, thr, rel_widths=c(
     # View plots
     plot_grid(pr, it, rel_widths=rel_widths)
 }
-# Esempio d'uso
-#set.seed(22)
-#persons <- data.frame(id=factor(1:500),logit=rnorm(500))
-#items <- data.frame(item=factor(rep(1:20,each=3)),thr=factor(rep(1:3,20)),logit=rnorm(60))
-#pi_map(persons, items, logit.pr="logit", logit.it="logit", item="item", thr="thr")
-
